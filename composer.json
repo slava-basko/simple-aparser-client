@@ -1,0 +1,22 @@
+{
+  "name": "slava-basko/simple-aparser-client",
+  "type": "library",
+  "description": "Client for A-Parser",
+  "keywords": ["Aparser", "client"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Slava Basko",
+      "email": "basko.slava@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aparser\\": "src/Aparser/"
+    }
+  }
+}
