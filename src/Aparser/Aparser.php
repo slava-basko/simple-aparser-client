@@ -431,10 +431,11 @@ class Aparser
         curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: text/plain; charset=UTF-8']);
 
         $response = curl_exec($ch);
+        $errorMsg = curl_error($ch);
         curl_close($ch);
 
         if($response === false) {
-            throw new CurlResponseException('Response fail: '. curl_error($ch));
+            throw new CurlResponseException('Response fail: '. $errorMsg);
         }
 
         $response = json_decode($response, true);
